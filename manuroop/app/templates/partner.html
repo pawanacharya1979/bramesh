@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+main {
+        margin:0px;
+        }
+
+    h3{
+     color:black;
+    }
+  .card-panel{
+  padding:10px;
+  margin-top: 3px;
+  background-color:#F5F5F5;
+  }
+
+
+
+    </style>
+<div class="col s12 ">
+        <div class="card-panel">
+          <span class="white-text">
+              <center> <h3>PARTNERS</h3></center>
+          </span>
+        </div>
+</div>
+ <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/Salesforce-Consulting-Partner-India.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <span class="black-text">
+Salesforce – Salesforce is a global cloud computing company, striving to create a platform for customer success. It provides a platform for businesses of all sizes to help them expand exponentially. It is a global sales leader with #1 Customer Relationship Management (CRM) solution which gives Salesforce automation an edge over the others.
+Pegasys is an authorized Salesforce Partner in Customization and Training. Our services are reliable and quick to implement, which will surely take your business to new heights.              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/tableau.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <span class="black-text">
+Tableau – Tableau is a powerful and fastest growing data visualization tool used in the Business Intelligence Industry. It helps in simplifying raw data into the very easily understandable format.
+Data analysis is very fast with Tableau and the visualizations created are in the form of dashboards and worksheets. The data that is created using Tableau can be understood by professional at any level in an organization. It even allows a non-technical user to create a customized dashboard.
+           </div>
+          </div>
+        </div>
+      </div>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/cognos.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <span class="black-text">
+Cognos – Cognos is IBM's business intelligence (BI) and performance management software suite. The software is designed to enable business users without technical knowledge to extract corporate data, analyze it and assemble reports.
+IBM Cognos Business intelligence is a web-based reporting and analytic tool.
+It is used to perform data aggregation and create user friendly detailed reports.
+IBM Cognos provides a wide range of features and can be considered as an enterprise software to provide flexible reporting environment and can be used for large and medium enterprise. Cognos also provides you an option to export the report in XML or PDF format or you can view the reports in XML format.
+           </div>
+          </div>
+        </div>
+      </div>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/Informatica-Consulting-Partner-India.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <span class="black-text">
+Informatica – Informatica is a software development company whose core products include Enterprise Cloud Data Management and Data Integration.
+Pegasys uses Informatica to help align business data and find business solutions for industries as well as small businesses.        </div>
+          </div>
+        </div>
+      </div>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/Microsoft-Dynamics-Consulting-Partner-India.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <span class="black-text">
+Microsoft Dynamics – Microsoft Dynamics is a line of enterprise resource planning and customer relationship management software applications.
+Microsoft markets Dynamics applications through a network of reselling partners who provide specialized services. Pegasys is one of the prominent partners and has implemented the software setup successfully for many businesses.           </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    main {
+        margin:0px;
+        }
+        .pharma {
+          margin-left:40px;
+          margin-top:20px;
+  }
+
+</style>
+ {% load static %}
+<img src="{% static "images/pharma_img.png" %}" alt="salesforce_implmentation_img" width=100%/>
+<div class="pharma">
+<p>Our Pharma and Life Sciences center of excellence provides customized solutions to address the clients complex business challenges. We support our clients in automating their business processes with our home grown cutting edge cloud based solutions.</p>
+<h4 style="color:red; font-size:15px;">Cloud based solutions implemented for global pharma<br> companies</h4>
+<h4 style="color:green; font-size:15px;">Active Pharmaceutical Ingredient (API) business flow automation</h4>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s6">
+                {% load static %}
+              <img style="width:400px;" src="{% static "images/pharm_bg.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+            <div class="col s6">
+              <span class="black-text">
+Automated API sales processes of world’s leading pharmaceutical companies with our customized cloud solutions. Following are the benifits of our solutions:
+            <ol><li>Helped business teams to spend less time in preparing the pipeline data for managers</li><li>Deliver consistent pricing information to prospect</li><li>Streamline API sales processes</li><li>Lead, Account, Contact, Opportunity, Project and Quote Management</li><li>Real time reports and dashboards of Sales, Pipeline, Contracts and Travel Budgets</li></ol>
+            </div>
+
+          </div>
+        </div>
+      </div>
+<h4><b>MedForce: Our in-house multi-tier cloud solution with Hybrid mobile application
+</b></h4>
+<p>Developed multi-tiered Salesforce solutions and hybrid (IOS/Android) mobile applications to automate global pharma clients sales processes across various countries where they have operations. Our product MedForce has served as an alternative for their inbuilt CRM Solution.</p>
+<h4 style="font-size:15px;"><b>Key benifits of our solutions are:</b></h4>
+<ol><li>Drive future state of Sales Excellence/Operations</li><li>Alignment to global Sales Key Performce Indicators</li><li>Enable data-driven decision making for senior commercial leaders</li></ol>
+</div>
+    {%endblock%}

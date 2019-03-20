@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link href="/assets/materialize.css?body=1" media="all" rel="stylesheet" type="text/css" />
+           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.css">
+	   <link media="screen,projection"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <style>
+html,body{
+
+          height:100%;
+          position: relative;
+                  }
+        h1{
+          font-size: 3rem;
+
+        }
+
+        h2{
+         font-size: 2.4em
+        }
+        h3{
+          font-size: 1.8rem;
+        }
+        h4{
+          font-size: 1.1rem;
+        }
+        p{
+          font-size: 2.4rem;
+          font-size: 1rem;
+        }
+        a{
+          color: black;
+        }
+        nav{
+          background-color:lightblue !important;
+
+        }
+        .side-nav{
+          background-color: pink !important;
+
+        }
+        main {
+        margin:20px;
+        }
+        .mini-nav {
+    margin-top: -14px;
+    height: 35px;
+    background-color: #404040;
+    position: sticky;
+    width: 100%;
+}
+.mini-nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    margin-left: 75%;
+}
+.mini-nav .material-icons {
+    color: white;
+}
+.dropdown-content {
+  background-color: #FFFFFF;
+  margin: 0;
+  display: none;
+  min-width: 200px; /* Changed this to accomodate content width */
+  max-height: auto;
+	margin-left: -1px; /* Add this to keep dropdown in line with edge of navbar */
+  overflow: hidden; /* Changed this from overflow-y:auto; to overflow:hidden; */
+  opacity: 0;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  will-change: width, height;
+}
+.title{
+      font-size:13px;
+}
+        button{
+           background-color:white;
+           border-radius:15px;
+           font-size:15px;
+           padding: 5px 30px;
+           color:green;
+
+        }
+
+
+img#logo.responsive-img, video.responsive-video {
+    max-width: 5%;
+    height: auto;
+    margin-left:30px;
+}
+
+               .main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+
+        .side-nav li a{
+color:lightblue !important;
+        }
+.page-footer{
+  position: absolute;
+  bottom: 0;
+  padding-top:0;
+  width: 100%;
+  background-color: lightblue;
+}
+
+ @media screen and (min-width:1000px) {
+.mini-nav ul li a {
+    font-size: 14px;
+    padding: 6px;
+    color: white;
+}
+}
+
+
+        @media screen and (max-width:800px) {
+          html{
+          font-size: 12px;
+        }
+        }
+
+        @media screen and (max-width:700px) {
+.nav-content li{
+  padding:0px !important;
+  font-size: 11px;
+}
+.nav-content li a{
+  padding:0px !important;
+  font-size: 11px;
+
+
+        }
+      }
+
+   @media screen and (min-width:800px) {
+
+}
+      </style>
+
+    <title>{% block title %}Manuroop{% endblock %}</title>
+  </head>
+<body>
+<div class="main-container">
+    <div class="mini-nav">
+      <ul>
+	<li><i class="material-icons">email</i></li>
+          <li><a href="mailto:pawanacharya1979@gmail.com">pawanacharya1979@gmail.com</a></li>
+		  </ul>
+    </div>
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+          {% load static %}
+        <a href="{% url 'index' %}"><img class="responsive-img" id="logo" src="{% static "images/acharya.png" %}"/></a>
+        <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% if user.is_authenticated %}
+            <li class="pull-right" style="margin-right:10px;"><a class="Black-text" href="{% url 'logout' %}">Sign Out</a></li>
+            <li><p class="navbar-text green-text">Hi, {{ user.first_name }}</p></li>
+           {% endif %}
+             <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a class="dropdown-button" href="{% url 'about' %}" data-activates="dropdown" data-beloworigin="true">About Us</a></li>
+            <li><a class="dropdown-button"  data-activates="dropdown2" data-beloworigin="true">CRM Services</a></li>
+            <li><a class="dropdown-button"  data-activates="dropdown1" data-beloworigin="true">Services & Solutions</a></li>
+
+
+            <li ><a href="{% url 'contactus' %}">Contact Us</a></li>
+
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'courses' %}">courses</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li ><a href="{% url 'contactus' %}">Contact</a></li>
+
+
+
+        </ul>
+      </div>
+    </nav>
+    <ul id="dropdown" class="dropdown-content collection">
+		<li>
+				<a href="{% url 'about' %}" class="secondary-content">
+                    <span class="title">Company Overview</span></a>
+		</li>
+		<li>
+				<a href="{% url 'partners' %}" class="secondary-content">
+                     <span class="title">Partners</span></a>
+		</li>
+
+</ul>
+    <ul id="dropdown2" class="dropdown-content collection">
+		<li>
+				<a href="{% url 'leadsquared' %}" class="secondary-content">
+                    <span class="title">LeadSquared CRM</span></a>
+		</li>
+		<li>
+				<a href="{% url 'microsoftdynamics' %}" class="secondary-content">
+                     <span class="title">Microsoft Dynamics CRM</span></a>
+		</li>
+
+</ul>
+    <ul id="dropdown1" class="dropdown-content collection">
+		<li>
+				<a href="{% url 'pharma-and-life-sciences-crm' %}" class="secondary-content">
+                    <span class="title">Pharma and Life Science CRM</span></a>
+		</li>
+		<li>
+				<a href="{% url 'hospitality-crm' %}" class="secondary-content">
+                     <span class="title">Hospital CRM</span></a>
+		</li>
+        <li>
+				<a href="{% url 'real-estate-crm' %}" class="secondary-content">
+                     <span class="title">Real Estate CRM</span></a>
+		</li>
+        <li>
+				<a href="{% url 'manufacturing-crm' %}" class="secondary-content">
+                     <span class="title">Manufacturing CRM</span></a>
+		</li>
+        <li>
+				<a href="{% url 'agri-products-crm' %}" class="secondary-content">
+                     <span class="title">Agri-Products CRM</span></a>
+		</li>
+        <li>
+				<a href="{% url 'it-ites-crm' %}" class="secondary-content">
+                     <span class="title">IT & ITES CRM</span></a>
+		</li>
+        <li>
+				<a href="{% url 'nonprofits-crm' %}" class="secondary-content">
+                     <span class="title">Non Profits CRM</span></a>
+		</li>
+
+</ul>
+    </div>
+
+      {% if user.is_authenticated %}
+      {% else %}
+     <h3><center><i><font color="purple">Welcome to Python & PLSQL courses</font></i></center></h3>
+<a href="{% url 'login1' %}"><center><button type="login">login</button></a> &nbsp; <a href="{% url 'regform' %}"><button type="registration">registration</button></center></a>
+      {% endif %}
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+        <footer class="page-footer">
+          <div class="footer-copyright">
+            <font class="container" color="black" style="font-size:12px;">
+                © 2019 Copyright Acharya Tech <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created by Sunera Intern(EAS)</font>
+
+<!--Facebook icon-->
+<a href="https://facebook.com/flashissue" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/ueBIjxRoTBuYR6XWW1iO_v3qVW5nRUq5VZF9RQXi2_twitter.png" /> </a>&nbsp; &nbsp; &nbsp;
+<!--Google+ icon-->
+<a href="http://plus.google.com" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/gHd2XoyiQbKBqljm7bzg_63j3xtd7SX28TTMeOSfZ_google.png" /> </a>&nbsp; &nbsp;&nbsp;
+<!--Twitter icon-->
+<a href="https://facebook.com/14221A0565" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/MsIJsIsDT9WLAxxH4aIK_OgdHV3vxSR2737LGd8cq_facebook.png" /> </a>&nbsp; &nbsp;&nbsp;
+<!--Linkedin icon-->
+<a href="http://pinterest.com" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/b8Xt2lN8TCKhilmoHXGW_TCjqF6FgS86WoWzUOQCh_pinterest.png" /> </a>&nbsp; &nbsp;&nbsp;
+
+
+          </div>
+
+        </footer>
+</div>
+  </body>
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+ <script>
+$(document).ready(function(){
+$('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      hover: true, // Activate on hover
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+
+		}); // End Document Ready
+
+ $(document).ready(function(){
+ $('.slider').slider();
+ $('#slide1').height(300);
+ $('.slides').height(300);
+ $('.slider').indicators(false);
+});
+
+$(document).ready(function() {
+    $('select').material_select();
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= 35) {
+            $('nav').addClass('navbar-fixed');
+        }
+        else {
+            $('nav').removeClass('navbar-fixed');
+        }
+    });
+ });
+ </script>
+</html>

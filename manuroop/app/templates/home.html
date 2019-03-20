@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+h3{
+   color:black;
+}
+ main {
+        margin:0px;
+        }
+p{
+  font-size:17px;
+}
+.IT{
+          height:916px;
+          background-color:#F8F9F9;
+          margin-top: 0px;
+
+        }
+
+        .head{
+        padding-top:30px;
+        }
+.truncate{
+
+display: block;
+
+max-width: 220px;
+
+white-space: nowrap;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+}
+
+        .IT-grid{
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr;
+         padding:50px 182px 0px 188px;;
+
+        }
+
+		.IT-grid2,.IT-grid1,.IT-grid3{
+		 border: 2px solid 	#9ea8a6;
+         height:350px;
+		 width:250px;
+         display:block;
+         justify-content: center;
+         flex-flow: column;
+         align-items:center;
+
+		}
+
+
+    </style>
+<div class="slider" id="slide1">
+        <ul class="slides" id="slides1">
+          <li>
+			  {% load static %}
+<img src="{% static "images/salesforce_implmentation_img.png" %}" alt="salesforce_implmentation_img" width=100%/>
+          </li>
+          <li>
+<img src="{% static "images/salesforce_implmentation_img.png" %}" alt="salesforce_implmentation_img" width=100%/>
+          </li>
+          <li>
+<img src="{% static "images/CRM-BANNER.PNG" %}" alt="salesforce_implmentation_img" width=100%/>
+          </li>
+          <li>
+<img src="{% static "images/crm.jpg" %}" alt="salesforce_implmentation_img" width=100%/>
+          </li>
+        </ul>
+      </div>
+<div class="IT">
+	<div class="head">
+     <center><h3><b>Our Services</b></h3>
+<p>CRM Services, ERP Implementation, Cloud Software, Open Source and Mobile App Development</p></center>
+	</div>
+            <div class="IT-grid">
+         <div class="IT-grid1">
+            <div class="icon">icon</div>
+             <h4>CRM Services</h4>
+          <center>  <p class="truncate">Setup, Integration, Customization, and Training - end to end solution for new and existing CRM instances. Develop scalable Sales,
+                </p></center>
+
+				</div>
+          <div class="IT-grid2">
+            <div class="icon">icon</div>
+             <h4>ERP Implementation</h4>
+             <center> <p class="truncate">ERP Software Implementation, Business Process Study, ERP Configuration, Data Migration, and Training - improve business efficiency </p></center>
+		  </div>
+
+          <div class="IT-grid3">
+          <div class="icon">icon</div>
+          <h4>Data Analytics</h4>
+          <center><p class="truncate">Analyze and mark trends, Generate detailed Reports, and Reduce losses with our BI and artificial predictive intelligence tools. Us</p></center>
+		 </div></div></div>
+
+
+{% endblock %}

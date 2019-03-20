@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if messages %}
+<ul>
+	{% for message in messages %}
+	   <li>{{ message }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+<center>
+    <h5 class="indigo-text"><i>Please, login into your account</i></h5>
+     <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+    <form method="post">
+        {% csrf_token %}
+        <input type='hidden', name="next",value=" {{ next }}"/>
+        {{ form.as_p }}
+         <label style='float: right;'>
+              <a class='pink-text' href="{% url 'password_reset' %}"  style="font-style:italic; font-size:1em;"><u>Forget Password?</u></a>
+							</label>
+        <div class='row'>
+                <button type='submit'>Login</button>
+              </div>
+    </form>
+</div>
+     </div></center>
+{% endblock %}

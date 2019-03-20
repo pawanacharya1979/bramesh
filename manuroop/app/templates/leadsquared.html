@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+main {
+        margin:0px;
+        }
+
+    h3{
+     color:black;
+    }
+  .card-panel{
+  padding:10px;
+  margin-top: 3px;
+  background-color:#F5F5F5;
+  }
+
+  .about{
+          margin-left:40px;
+          margin-top:40px;
+  }
+  h4{
+      margin-left:30px;
+      margin-top:20px;
+      font-size:20px;
+  }
+    .about h4{
+        margin:0px;
+        font-size:17px;
+    }
+
+    .about ol li{
+    margin-left:8px;
+    display: list-item;
+    }
+
+    </style>
+<div class="col s12 ">
+        <div class="card-panel">
+          <span class="white-text">
+              <center> <h3><b>LEADSQUARED CRM</b></h3></center>
+          </span>
+        </div>
+</div>
+<div class="about">
+    <p>Increase the sales velocity of your business with lead management, lead qualification and sales automation.</p>
+    <h4><b>Marketing Automation</b></h4>
+    <ol><li> Drip Marketing</li><li> Email Campaigns</li><li> Landing Pages</li><li> Lead Scoring</li><li>Website Tracking</li></ol>
+<h4><b>Sales + Mobile CRM</b></h4>
+<ol><li>Lead Tracking</li><li>Lead Qualification</li><li>Lead Distribution</li><li>Sales Automation</li><li>Sales Tracking</li></ol>
+</div>
+<h4>Our Clients</h4>
+{% endblock %}
