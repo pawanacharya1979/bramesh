@@ -9,78 +9,78 @@ from django.http import HttpResponseRedirect
 from django.core.mail import EmailMessage
 
 # Create your views here.
-@login_required
+# @login_required
 def home(request):
     return render(request, 'home.html')
 
 
-def regform(request):
-    if request.method == 'POST':
-        form = RegForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Registration successful.Please enter username and password!')
-            return redirect('login1')
-    else:
-        form = RegForm()
-    return render(request, 'regform.html', {'form': form})
+# def regform(request):
+#    if request.method == 'POST':
+#        form = RegForm(request.POST)
+#        if form.is_valid():
+#            form.save()
+#            messages.success(request, 'Registration successful.Please enter username and password!')
+#            return redirect('login1')
+#    else:
+#        form = RegForm()
+#    return render(request, 'regform.html', {'form': form})
 
-def login1(request):
-    if request.method == 'POST':
-        form = Login(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('home')
-    else:
-        form = Login()
-    return render(request,'login.html',{'form': form})
+# def login1(request):
+#    if request.method == 'POST':
+#        form = Login(request.POST)
+#        if form.is_valid():
+#            username = form.cleaned_data.get('username')
+#            raw_password = form.cleaned_data.get('password')
+#            user = authenticate(username=username, password=raw_password)
+#            login(request, user)
+#            return redirect('home')
+#    else:
+#        form = Login()
+#    return render(request,'login.html',{'form': form})
 
 
-def index(request):
-    return render(request,'index.html')
+#def index(request):
+#    return render(request,'index.html')
 
-@login_required
+# @login_required
 def courses(request):
        return render(request, 'courses.html')
-@login_required
+# @login_required
 def about(request):
        return render(request, 'about.html')
-@login_required
+# @login_required
 def partners(request):
        return render(request, 'partner.html')
-@login_required
+# @login_required
 def leadsquared(request):
        return render(request, 'leadsquared.html')
-@login_required
+# @login_required
 def microsoftdynamics(request):
        return render(request, 'microsoftdynamics.html')
-@login_required
+# @login_required
 def pharma(request):
        return render(request, 'pharma.html')
-@login_required
+# @login_required
 def hospitality(request):
        return render(request, 'hospitality.html')
-@login_required
+# @login_required
 def real(request):
        return render(request, 'real.html')
-@login_required
+# @login_required
 def manufacturing(request):
         return render(request, 'manufacture.html')
-@login_required
+# @login_required
 def agri(request):
         return render(request, 'agri.html')
-@login_required
+# @login_required
 def ites(request):
         return render(request, 'ites.html')
-@login_required
+# @login_required
 def nonprofits(request):
         return render(request, 'nonprofit.html')
 
 
-@login_required
+# @login_required
 def contactus(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

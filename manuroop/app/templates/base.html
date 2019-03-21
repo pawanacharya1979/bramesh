@@ -13,7 +13,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      <style>
 html,body{
-
           height:100%;
           position: relative;
                   }
@@ -93,8 +92,9 @@ html,body{
 
 
 img#logo.responsive-img, video.responsive-video {
-    max-width: 5%;
+    max-width: 12%;
     height: auto;
+    margin-top:5px;
     margin-left:30px;
 }
 
@@ -164,13 +164,13 @@ color:lightblue !important;
     <nav>
       <div class="nav-wrapper">
           {% load static %}
-        <a href="{% url 'index' %}"><img class="responsive-img" id="logo" src="{% static "images/acharya.png" %}"/></a>
+        <a href="{% url 'home' %}"><img class="responsive-img" id="logo" src="{% static "images/Capture.PNG" %}"/></a>
         <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            {% if user.is_authenticated %}
+<!--            {% if user.is_authenticated %}
             <li class="pull-right" style="margin-right:10px;"><a class="Black-text" href="{% url 'logout' %}">Sign Out</a></li>
             <li><p class="navbar-text green-text">Hi, {{ user.first_name }}</p></li>
-           {% endif %}
+           {% endif %}  -->
              <li><a href="{% url 'home' %}">Home</a></li>
             <li><a class="dropdown-button" href="{% url 'about' %}" data-activates="dropdown" data-beloworigin="true">About Us</a></li>
             <li><a class="dropdown-button"  data-activates="dropdown2" data-beloworigin="true">CRM Services</a></li>
@@ -247,11 +247,10 @@ color:lightblue !important;
 </ul>
     </div>
 
-      {% if user.is_authenticated %}
+<!--      {% if user.is_authenticated %}
       {% else %}
      <h3><center><i><font color="purple">Welcome to Python & PLSQL courses</font></i></center></h3>
-<a href="{% url 'login1' %}"><center><button type="login">login</button></a> &nbsp; <a href="{% url 'regform' %}"><button type="registration">registration</button></center></a>
-      {% endif %}
+      {% endif %}-->
     <main>
       {% block content %}
       {% endblock %}
@@ -260,8 +259,8 @@ color:lightblue !important;
         <footer class="page-footer">
           <div class="footer-copyright">
             <font class="container" color="black" style="font-size:12px;">
-                © 2019 Copyright Acharya Tech <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created by Sunera Intern(EAS)</font>
+                © 2019 Copyright Manuroop <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created by Manuroop INC.</font>
 
 <!--Facebook icon-->
 <a href="https://facebook.com/flashissue" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/ueBIjxRoTBuYR6XWW1iO_v3qVW5nRUq5VZF9RQXi2_twitter.png" /> </a>&nbsp; &nbsp; &nbsp;

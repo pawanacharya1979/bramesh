@@ -7,11 +7,11 @@ h3{
  main {
         margin:0px;
         }
-p{
+    p{
   font-size:17px;
 }
 .IT{
-          height:916px;
+          height:500px;
           background-color:#F8F9F9;
           margin-top: 0px;
 
@@ -43,7 +43,7 @@ text-overflow: ellipsis;
 
 		.IT-grid2,.IT-grid1,.IT-grid3{
 		 border: 2px solid 	#9ea8a6;
-         height:350px;
+         height:300px;
 		 width:250px;
          display:block;
          justify-content: center;
@@ -58,13 +58,13 @@ text-overflow: ellipsis;
         <ul class="slides" id="slides1">
           <li>
 			  {% load static %}
-<img src="{% static "images/salesforce_implmentation_img.png" %}" alt="salesforce_implmentation_img" width=100%/>
+<img src="{% static "images/big-data-analytics-banner.jpg" %}" alt="salesforce_implmentation_img" width=100%/>
           </li>
           <li>
-<img src="{% static "images/salesforce_implmentation_img.png" %}" alt="salesforce_implmentation_img" width=100%/>
+<img src="{% static "images/big-data-analytics-Career.png" %}" alt="salesforce_implmentation_img" width=100%/>
           </li>
           <li>
-<img src="{% static "images/CRM-BANNER.PNG" %}" alt="salesforce_implmentation_img" width=100%/>
+<img src="{% static "images/resources_banner.png" %}" alt="salesforce_implmentation_img" width=100%/>
           </li>
           <li>
 <img src="{% static "images/crm.jpg" %}" alt="salesforce_implmentation_img" width=100%/>
@@ -75,26 +75,52 @@ text-overflow: ellipsis;
 	<div class="head">
      <center><h3><b>Our Services</b></h3>
 <p>CRM Services, ERP Implementation, Cloud Software, Open Source and Mobile App Development</p></center>
-	</div>
+
+    </div>
             <div class="IT-grid">
          <div class="IT-grid1">
-            <div class="icon">icon</div>
-             <h4>CRM Services</h4>
-          <center>  <p class="truncate">Setup, Integration, Customization, and Training - end to end solution for new and existing CRM instances. Develop scalable Sales,
-                </p></center>
+         <center>   <div class="icon">
+              {% load static %}
+                <img src="{% static "images/crm_icon.png" %}"/></div>
+             <h4 style="color:blue;">CRM Services</h4>
+            <p style="font-size:12px;">Setup, Integration, Customization, and Training - end to end solution for new and existing CRM instances. Develop scalable Sales...
+                </p>
+          <a class="btn btn-theme-primary-outline" href="/services/consulting-training/">Read More</a></center>
 
 				</div>
           <div class="IT-grid2">
-            <div class="icon">icon</div>
-             <h4>ERP Implementation</h4>
-             <center> <p class="truncate">ERP Software Implementation, Business Process Study, ERP Configuration, Data Migration, and Training - improve business efficiency </p></center>
-		  </div>
+           <center>   <div class="icon">
+              {% load static %}
+                <img src="{% static "images/ERPImplementation.png" %}"/></div>
+             <h4 style="color:blue;">ERP Implementation</h4>
+              <p style="font-size:12px;">ERP Software Implementation, Business Process Study, ERP Configuration, Data Migration, and Training - improve business efficiency... </p>
+		  <a class="btn btn-theme-primary-outline" href="/services/consulting-training/">Read More</a></center>
+          </div>
 
           <div class="IT-grid3">
-          <div class="icon">icon</div>
-          <h4>Data Analytics</h4>
-          <center><p class="truncate">Analyze and mark trends, Generate detailed Reports, and Reduce losses with our BI and artificial predictive intelligence tools. Us</p></center>
-		 </div></div></div>
-
-
+          <center>   <div class="icon">
+              {% load static %}
+                <img src="{% static "images/DataAnalytics.png" %}"/></div>
+          <h4 style="color:blue;">Data Analytics</h4>
+          <p style="font-size:12px;">Analyze and mark trends, Generate detailed Reports, and Reduce losses with our BI and artificial predictive intelligence tools...</p>
+		 <a class="btn btn-theme-primary-outline" href="/services/consulting-training/">Read More</a></center>
+          </div></div></div>
+<div class="head">
+     <center><h3><b>Our Partners</b></h3>
+         <p>Working in the industry for over two decades, Manuroop has developed key Partnerships with leading Software companies.</p></center>
+    </div>
+ <div class="row valign-wrapper">
+            <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/Salesforce-Consulting-Partner-India.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+      <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/Microsoft-Dynamics-Consulting-Partner-India.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+      <div class="col s4">
+                {% load static %}
+              <img src="{% static "images/Informatica-Consulting-Partner-India.png" %}" alt="" > <!-- notice the "circle" class -->
+            </div>
+ </div>
 {% endblock %}
