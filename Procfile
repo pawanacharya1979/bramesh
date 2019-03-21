@@ -1,1 +1,1 @@
-web: gunicorn manuroop.wsgi --log-file=-
+web: gunicorn manuroop.wsgi
