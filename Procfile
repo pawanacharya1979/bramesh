@@ -1,0 +1,1 @@
+web: gunicorn manuroop.wsgi --log-file -
