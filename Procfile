@@ -1,2 +1,2 @@
-web: gunicorn bramesh.wsgi
-web: gunicorn manuroop
+web: gunicorn manuroop.wsgi
+
