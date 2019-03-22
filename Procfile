@@ -1,2 +1,2 @@
 web: gunicorn manuroop.wsgi
-web: gunicorn manuroop:app
+web: gunicorn app:manuroop
